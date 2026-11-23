@@ -20,7 +20,7 @@ namespace FireRescue.Editor
         public const string ShowcasePackageId="com.metahackathon2026.emberdeep";
         public const string ShowcaseVersion="1.0.0";
         public const int ShowcaseVersionCode=32; // PICO/Meta: every upload needs a higher code; 0.2.x builds used up to 31
-        public const string ShowcaseIconPath="Assets/FireRescue/Art/AppIcon/Emberdeep-Hydrant-Icon.png";
+        public const string ShowcaseIconPath="Assets/FireRescue/Art/AppIcon/Emberdeep-Sheep-Icon.png"; // 2026-11-22 store icon (close-up B); hydrant kept
         const string ShowcaseIconBackgroundPath="Assets/FireRescue/Art/AppIcon/Emberdeep-Icon-Background.png";
         public const string ShowcaseApk="Deliverables/Emberdeep/Emberdeep-1.0.0.apk";
         public const string PicoShowcaseApk="Deliverables/Emberdeep/Emberdeep-1.0.0-Pico.apk";
