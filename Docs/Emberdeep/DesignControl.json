@@ -1,0 +1,81 @@
+{
+  "pages": [
+    {
+      "title": "Emberdeep Game Design and Development Specification",
+      "intro": "Build a hand-tracked miniature firefighting expedition in which the player collects water, contains fire, searches recovered ground, rescues wildlife and improves equipment to reach deeper forest sectors. This specification gives design, engineering and QA one executable direction for the next iteration.",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Revision 0.13 | 9 November 2026 | Candidate Emberdeep 0.2.11 / Android code 14 implements the approved 0.12 direction. Slow recovery, explicit accounting and renderer-only catalogue previews are implemented as a candidate. FinalVerification passed 204 EditMode and 144 PlayMode with zero failed, skipped or inconclusive. This includes 20 new EditMode and 26 new PlayMode cases plus 3 restored existing PlayMode cases; restored coverage is not newly authored. Twelve final Editor synthetic captures passed visual review. Quest and PICO APKs passed version 0.2.11/code 14, ARM64, signature/icon, exact Camp/Fireground scene whitelist and settings-restoration audits. Both builds report zero errors, with 8 Quest warnings and 12 PICO warnings. Source integrity is recorded in Logs/EmberdeepRecoveryShop/ReleaseEvidence.json; these build checks do not establish headset operation or performance. Quest 3 replacement installation and app info verified 0.2.11/code 14. The device was Asleep and no app process was observed; physical hand tracking, comfort, stereo readability and performance remain pending. No PICO hardware acceptance is claimed. Historical 0.2.10 / code 13 passed 184 EditMode and 115 PlayMode and built both APKs. Those reports, screenshots, installation and user feedback do not validate 0.2.11. Read WaterRecoveryAndShopPreview.json and ImplementationStatus.json for current scope. Prior placement, menu and hand confirmations remain version-specific. Generated Word content checks and rendered-page QA are separate gates."
+        },
+        {
+          "kind": "h2",
+          "text": "Authority and status"
+        },
+        {
+          "kind": "p",
+          "text": "CURRENT v0.1 in original sections denotes their historical inspected baseline. IMPLEMENTED describes candidate code, not hardware acceptance. PROPOSED and TARGET remain future work. Read ImplementationStatus.json and InteractionIntentFix.json for runtime evidence. WaterRecoveryAndShopPreview.json is the newest implementation override: slow recovery and shop catalogue previews are implemented as a candidate; final Editor verification passed 204 EditMode and 144 PlayMode; APK audits passed; device gates remain pending. Prior device confirmations retain their version and question scope."
+        },
+        {
+          "kind": "h2",
+          "text": "Reading map"
+        },
+        {
+          "kind": "table",
+          "columns": [
+            "Sections",
+            "Use"
+          ],
+          "rows": [
+            [
+              "2 to 4",
+              "Product boundaries, expedition state and hand interaction ownership."
+            ],
+            [
+              "5 to 7",
+              "Physical water supplies and fire simulation contracts."
+            ],
+            [
+              "8 to 10",
+              "Search, animals, economy and sector teaching progression."
+            ],
+            [
+              "11 and 12",
+              "Equipment parameters, salvage modifications and session presentation."
+            ],
+            [
+              "13 to 16",
+              "Architecture, migration, persistence, QA and release gates."
+            ],
+            [
+              "Implementation register",
+              "M1 source and test mapping, accepted decisions, remaining gates."
+            ]
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "Director decisions"
+        },
+        {
+          "kind": "bullets",
+          "items": [
+            "DD-01: One active tabletop sector at a time; deeper exploration changes the active sector without requiring physical room traversal.",
+            "DD-02 revised in 0.12: retain manual supply and add very slow automatic recovery under GD-WATER-10/11. A reusable free hydrant or creek source remains reachable with an empty tank. Revision 0.13 implements this as candidate 0.2.11 through an explicit eligibility and accounting API; 0.2.10 remains the historical manual-only baseline.",
+            "DD-03: Containment leads to safe search. Animal rescue is rewarding and gentle; it cannot become a mandatory progression lock.",
+            "DD-04: Equipment changes interaction and water coverage, not only numerical damage. Preserve the existing ballistic water and hand interaction investment.",
+            "DD-05: Ship a standalone firefighting experience with the camp and fireground only; no route into the shadow or car games."
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "Maintenance contract"
+        },
+        {
+          "kind": "p",
+          "text": "The reviewable JSON files in Docs/Emberdeep are the source of truth. Regenerate the Word documents with Tools/BuildEmberdeepDesignDocs.py after edits. Keep requirement IDs stable, record decisions in DocumentManifest.json, and update status only with linked code and test evidence. The earlier one-page showcase remains a presentation summary, not an implementation authority. Owner roles in this document describe responsibilities to assign, not staffed commitments."
+        }
+      ]
+    }
+  ]
+}

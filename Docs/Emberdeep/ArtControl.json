@@ -1,0 +1,72 @@
+{
+  "pages": [
+    {
+      "title": "Emberdeep Art Production Requirements",
+      "intro": "Produce readable, tactile miniature firefighting assets for a hand-tracked tabletop world. Art must make water quantity, fire response, safe interaction and recovered terrain visible while preserving the feel of manipulating a small living forest. This document is a production brief for artists and technical artists, with integration and acceptance requirements for engineering.",
+      "blocks": [
+        {
+          "kind": "p",
+          "text": "Revision 0.13 | 9 November 2026 | Candidate Emberdeep 0.2.11 / Android code 14 implements the approved 0.12 direction. Slow recovery, explicit accounting and renderer-only catalogue previews are implemented as a candidate. FinalVerification passed 204 EditMode and 144 PlayMode with zero failed, skipped or inconclusive. This includes 20 new EditMode and 26 new PlayMode cases plus 3 restored existing PlayMode cases; restored coverage is not newly authored. Twelve final Editor synthetic captures passed visual review. Quest and PICO APKs passed version 0.2.11/code 14, ARM64, signature/icon, exact Camp/Fireground scene whitelist and settings-restoration audits. Both builds report zero errors, with 8 Quest warnings and 12 PICO warnings. Source integrity is recorded in Logs/EmberdeepRecoveryShop/ReleaseEvidence.json; these build checks do not establish headset operation or performance. Quest 3 replacement installation and app info verified 0.2.11/code 14. The device was Asleep and no app process was observed; physical hand tracking, comfort, stereo readability and performance remain pending. No PICO hardware acceptance is claimed. Historical 0.2.10 / code 13 passed 184 EditMode and 115 PlayMode and built both APKs. Those reports, screenshots, installation and user feedback do not validate 0.2.11. Read WaterRecoveryAndShopPreview.json and ImplementationStatus.json for current scope. Prior placement, menu and hand confirmations remain version-specific. Generated Word content checks and rendered-page QA are separate gates."
+        },
+        {
+          "kind": "h2",
+          "text": "Production order"
+        },
+        {
+          "kind": "p",
+          "text": "Approve an in-headset interaction blockout first: extinguisher, refill port, hydrant socket and valve, then a small set of trees and readable water/fire feedback. Advance to searchable objects and two animal types only after the manual-water loop works. Complete creek refill, equipment variants and forest themes after the shared interaction contracts are stable. Validate on PICO 4 first as the baseline, then Quest 3."
+        },
+        {
+          "kind": "table",
+          "columns": [
+            "Sections",
+            "Production responsibility"
+          ],
+          "rows": [
+            [
+              "2 and 3",
+              "Art direction and environment asset inventory."
+            ],
+            [
+              "4 and 5",
+              "Equipment, water stations, animals, loot and interface assets."
+            ],
+            [
+              "6 to 8",
+              "Effects, audio cues and shader contracts."
+            ],
+            [
+              "9 and 10",
+              "Import specifications, budgets, handoff and acceptance."
+            ]
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "Approval responsibilities"
+        },
+        {
+          "kind": "bullets",
+          "items": [
+            "Project director approves silhouette, miniature scale, visual hierarchy and whether each asset supports its intended interaction.",
+            "Gameplay and XR engineers approve anchors, collision proxies, left-hand use, event bindings and reachable placement before detailing.",
+            "Technical artist owns material and shader implementations, variants, profiling captures and fallback quality.",
+            "QA accepts the integrated prefab on the named headset and records build hash, test conditions and defects. A beauty render alone is not delivery acceptance."
+          ]
+        },
+        {
+          "kind": "h2",
+          "text": "Scope and working files"
+        },
+        {
+          "kind": "p",
+          "text": "Keep the existing procedural world available as an integration fallback until authored prefabs pass acceptance. Source models, textures and audio need editable originals and usage provenance. Delivery must include the Unity prefab or material, documented public anchors, a preview and test evidence. Record each asset ID, owner, revision and review state in the production tracker. Do not bake gameplay state into textures or award currency from animation events."
+        },
+        {
+          "kind": "p",
+          "text": "Docs/Emberdeep/ArtProductionSections.json is the maintainable source for these requirements. Update it with any accepted interface or budget change, regenerate this Word document, and inspect every rendered page. The design document governs reward and state rules; this document governs their visual representation and asset integration."
+        }
+      ]
+    }
+  ]
+}
